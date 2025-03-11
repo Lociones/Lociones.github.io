@@ -1,0 +1,205 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    padding: 20px;
+    background-image: url(Fotos/Imagen1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Mantiene el fondo uniforme */
+    min-height: 100vh;
+}
+
+.Nombre {
+    font-size: 50px;
+    font-family: fantasy;  
+    color: rgb(52, 52, 52);
+    text-align: center;
+}
+
+.Bnv {
+    font-size: 100px;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #ffffff85;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Lista de enlaces del nav */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding: 0;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #db6868;
+    color: #fff8dc;
+}
+
+h2 {
+    font-size: 100px;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.info {
+    text-align: justify;
+}
+
+.Precio {
+    font-weight: bold;
+}
+
+/* Diseño del producto */
+.producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 700px;
+    gap: 20px;
+}
+
+/* Imagen del producto (ajustada para no ser muy grande) */
+.producto-img {
+    width: 30px;  /* Ajustado para un tamaño equilibrado */
+    max-width: 25%; /* Evita que crezca demasiado en pantallas grandes */
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Hover para WhatsApp */
+.whatsapp-btn:hover {
+    background-color: #128c7e;
+}
+
+/* RESPONSIVE */
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .producto {
+        flex-direction: row; /* Imagen a la izquierda */
+        text-align: left;
+        width: 90%;
+    }
+
+    .producto-img {
+        width: 10%;
+        max-width: 20px;
+        align-self: flex-start; /* Asegura que la imagen quede alineada a la izquierda */
+    }
+
+    .Nombre, .Bnv {
+        font-size: 2.5em;
+    }
+
+    nav ul {
+        width: 80%;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 768px) {
+    .producto {
+        flex-direction: row; /* Imagen a la izquierda */
+        text-align: left;
+        width: 95%;
+    }
+
+    .producto-img {
+        width: 10%;
+        max-width: 20px;
+        align-self: flex-start;
+    }
+
+    .footer {
+        font-size: 0.9em;
+        padding: 20px;
+    }
+}
+
+/* CELULARES PEQUEÑOS */
+@media (max-width: 480px) {
+    .producto {
+        flex-direction: row; /* Imagen a la izquierda */
+        text-align: left;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .producto-img {
+        width: 10%;
+        max-width: 20px;
+        align-self: flex-start;
+    }
+
+    .footer {
+        font-size: 0.8em;
+        padding: 5px;
+        text-align: center;
+    }
+}
